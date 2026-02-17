@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submit a Query | Attili & Associates</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-50 text-gray-800 font-sans">
+
+  <div id="navbar"></div>
+
+  <main class="pt-40 pb-20 px-6">
+    <div class="max-w-4xl mx-auto">
+      
+      <div class="text-center mb-12">
+        <h1 class="text-4xl font-extrabold text-slate-900">Submit an Inquiry</h1>
+        <p class="mt-4 text-gray-600">Have a specific financial requirement? Fill out the form below, and our experts will get back to you shortly.</p>
+      </div>
+
+      <div class="bg-white rounded-3xl shadow-xl border border-slate-100 p-8 md:p-12">
+        <form action="#" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          
+          <div class="flex flex-col gap-2">
+            <label class="text-sm font-semibold text-slate-700 ml-1">Full Name</label>
+            <input type="text" required placeholder="John Doe" class="px-5 py-3 rounded-2xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all">
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <label class="text-sm font-semibold text-slate-700 ml-1">Email Address</label>
+            <input type="email" required placeholder="john@example.com" class="px-5 py-3 rounded-2xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all">
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <label class="text-sm font-semibold text-slate-700 ml-1">Phone Number</label>
+            <input type="tel" placeholder="+91 98765 43210" class="px-5 py-3 rounded-2xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all">
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <label class="text-sm font-semibold text-slate-700 ml-1">Select Service</label>
+            <select required class="px-5 py-3 rounded-2xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white transition-all">
+              <option value="">-- Choose a Service --</option>
+              <option value="corporate">Corporate Services</option>
+              <option value="audit">Audit</option>
+              <option value="nri">Services for Non-Residents</option>
+              <option value="accounting">Accounting Services</option>
+              <option value="payroll">Payroll</option>
+              <option value="outsourcing">Benefits of Outsourcing</option>
+              <option value="tax">Income Tax</option>
+              <option value="gst">GST</option>
+              <option value="governance">Corporate Governance</option>
+              <option value="tds">TDS</option>
+            </select>
+          </div>
+
+          <div class="flex flex-col gap-2 md:col-span-2">
+            <label class="text-sm font-semibold text-slate-700 ml-1">Subject</label>
+            <input type="text" placeholder="Briefly describe your query" class="px-5 py-3 rounded-2xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all">
+          </div>
+
+          <div class="flex flex-col gap-2 md:col-span-2">
+            <label class="text-sm font-semibold text-slate-700 ml-1">Message</label>
+            <textarea rows="5" placeholder="Tell us more about your requirements..." class="px-5 py-4 rounded-3xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"></textarea>
+          </div>
+
+          <div class="md:col-span-2 mt-4 text-center">
+            <button type="submit" class="px-12 py-4 bg-blue-600 text-white font-bold rounded-full shadow-lg hover:bg-blue-700 hover:-translate-y-1 transition-all duration-300">
+              Send Message
+            </button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

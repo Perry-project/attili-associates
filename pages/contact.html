@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Attili & Associates</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    /* Scroll Reveal Animation Styles */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.9s ease-out;
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body class="bg-slate-50 text-gray-800 font-sans">
+
+  <div id="navbar"></div>
+
+  <main class="pt-48 pb-20 px-6">
+    <div class="max-w-7xl mx-auto">
+      
+      <div class="text-center mb-16 reveal">
+        <h2 class="text-blue-600 font-bold tracking-widest uppercase text-sm mb-3">Get In Touch</h2>
+        <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6">How Can We Assist You?</h1>
+        <p class="text-gray-500 max-w-2xl mx-auto text-lg">Reach out to our experts for professional auditing, taxation, and financial consultancy services.</p>
+      </div>
+
+      <div class="flex flex-col lg:flex-row gap-12">
+        
+        <div class="lg:w-1/3 space-y-6 reveal" style="transition-delay: 100ms;">
+          
+          <div class="bg-white p-8 rounded-[2rem] shadow-xl border border-slate-100 flex items-start gap-6 hover:border-blue-500 transition-all">
+            <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-slate-900 text-lg mb-1">Call Us</h4>
+              <p class="text-gray-600 text-sm mb-2">Direct assistance from our team.</p>
+              <a href="tel:+919542460669" class="text-blue-600 font-bold">+91 9542460669</a>
+            </div>
+          </div>
+
+          <div class="bg-white p-8 rounded-[2rem] shadow-xl border border-slate-100 flex items-start gap-6 hover:border-blue-500 transition-all">
+            <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-slate-900 text-lg mb-1">Email Us</h4>
+              <p class="text-gray-600 text-sm mb-2">Send us your detailed inquiries.</p>
+              <a href="mailto:casaikumarattili@gmail.com" class="text-blue-600 font-bold break-all text-xs md:text-sm">casaikumarattili@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="bg-white p-8 rounded-[2rem] shadow-xl border border-slate-100 flex items-start gap-6 hover:border-blue-500 transition-all">
+            <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-slate-900 text-lg mb-1">Our Office</h4>
+              <p class="text-gray-600 text-sm leading-relaxed">
+                123 Finance Plaza, Business District,<br>
+                City Name, State - 000000
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="lg:w-2/3 bg-slate-900 p-8 md:p-12 rounded-[2.5rem] shadow-2xl border border-slate-800 text-white reveal" style="transition-delay: 200ms;">
+          <h3 class="text-2xl font-bold mb-8 flex items-center gap-3">
+            <span class="w-1 bg-blue-600 h-8 rounded-full"></span>
+            Send a Message
+          </h3>
+          
+          <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="flex flex-col gap-2">
+              <label class="text-[10px] uppercase tracking-widest font-bold text-slate-500 ml-1">Full Name</label>
+              <input type="text" placeholder="Your Name" class="w-full px-5 py-3.5 rounded-2xl bg-slate-800 border border-slate-700 text-white focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all">
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <label class="text-[10px] uppercase tracking-widest font-bold text-slate-500 ml-1">Email Address</label>
+              <input type="email" placeholder="email@example.com" class="w-full px-5 py-3.5 rounded-2xl bg-slate-800 border border-slate-700 text-white focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all">
+            </div>
+
+            <div class="flex flex-col gap-2 md:col-span-2">
+              <label class="text-[10px] uppercase tracking-widest font-bold text-slate-500 ml-1">Subject</label>
+              <input type="text" placeholder="Service Inquiry" class="w-full px-5 py-3.5 rounded-2xl bg-slate-800 border border-slate-700 text-white focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all">
+            </div>
+
+            <div class="flex flex-col gap-2 md:col-span-2">
+              <label class="text-[10px] uppercase tracking-widest font-bold text-slate-500 ml-1">Your Message</label>
+              <textarea rows="5" placeholder="How can we help you today?" class="w-full px-5 py-4 rounded-3xl bg-slate-800 border border-slate-700 text-white focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all resize-none"></textarea>
+            </div>
+
+            <div class="md:col-span-2 mt-4">
+              <button type="submit" class="w-full md:w-auto px-12 py-4 bg-blue-600 text-white font-bold rounded-full hover:bg-blue-700 shadow-lg shadow-blue-600/20 transition-all duration-300">
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <section class="py-20 px-6 reveal">
+    <div class="max-w-7xl mx-auto">
+      <div class="w-full h-96 bg-slate-200 rounded-[2.5rem] overflow-hidden shadow-inner border border-slate-100 flex items-center justify-center">
+        <p class="text-slate-500 font-semibold italic">[ Google Map Embed - Your Location ]</p>
+      </div>
+    </div>
+  </section>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

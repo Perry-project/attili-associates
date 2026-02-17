@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attili & Associates | Chartered Accountants</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    html { scroll-behavior: smooth; }
+
+    /* --- Navigation Oval Indicator --- */
+    #nav-indicator {
+      position: absolute;
+      height: 38px;
+      background: rgba(37, 99, 235, 0.1); /* Subtle blue oval */
+      border-radius: 9999px;
+      z-index: -1;
+      transition: all 0.6s cubic-bezier(0.2, 1, 0.3, 1);
+      display: none;
+    }
+
+    /* --- Dual-Direction Animation Styles --- */
+    .reveal {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Hidden Services Transition */
+    #extra-services {
+      display: none;
+    }
+    #extra-services.show {
+      display: grid;
+    }
+
+    /* Enhanced Service Card Highlight */
+    .service-card {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 2px solid #e2e8f0; 
+    }
+    .service-card:hover {
+      border-color: #2563eb; 
+      transform: translateY(-10px);
+      box-shadow: 0 20px 25px -5px rgba(37, 99, 235, 0.1), 0 10px 10px -5px rgba(37, 99, 235, 0.04);
+      background-color: #f8fafc; 
+    }
+  </style>
+</head>
+
+<body class="bg-slate-50 text-gray-800 font-sans">
+
+  <div id="navbar"></div>
+
+  <section class="pt-48 pb-20 px-6 bg-white reveal">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center">
+      <div class="md:w-1/2">
+        <h1 class="text-5xl font-extrabold text-slate-900 leading-tight">
+          Financial Integrity with <span class="text-blue-600">Attili & Associates.</span>
+        </h1>
+        <p class="mt-6 text-lg text-gray-600 max-w-lg">
+          Expert auditing, taxation, and financial consultancy services tailored to help you navigate complex regulatory landscapes with ease.
+        </p>
+        <div class="mt-8 flex gap-4">
+          <a href="./pages/query.html" class="px-8 py-3 bg-blue-600 text-white font-semibold rounded-full shadow-md hover:bg-blue-700 transition">Get Started</a>
+          <a href="./#services" class="px-8 py-3 bg-white border border-gray-300 text-gray-700 font-semibold rounded-full hover:bg-gray-50 transition">View Services</a>
+        </div>
+      </div>
+      
+      <div class="md:w-1/2 mt-12 md:mt-0">
+        <div class="w-full h-96 rounded-[2.5rem] overflow-hidden border border-slate-200 shadow-2xl relative">
+           <img src="ca-image.png" alt="Attili & Associates Branding" class="w-full h-full object-cover">
+           <div class="absolute inset-0 bg-gradient-to-tr from-blue-600/10 to-transparent pointer-events-none"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="home-about" class="py-20 bg-white reveal">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row gap-12 items-center">
+      <div class="md:w-1/2">
+        <h2 class="text-blue-600 font-bold uppercase tracking-widest text-sm mb-3">About The Firm</h2>
+        <h3 class="text-3xl font-bold text-slate-900 mb-6">Experience You Can Trust</h3>
+        <p class="text-gray-600 leading-relaxed mb-6">
+          Attili & Associates is a premier Chartered Accountancy firm offering a wide array of financial services. We are dedicated to providing the highest level of professional ethics and personalized solutions.
+        </p>
+        <a href="./pages/about.html" class="text-blue-600 font-bold hover:underline">Read More About Us &rarr;</a>
+      </div>
+
+      <div class="md:w-1/2 w-full bg-slate-900 p-10 rounded-[2.5rem] shadow-2xl border border-slate-800 text-white">
+        <h4 class="text-2xl font-bold mb-2">Request a Call Back</h4>
+        <p class="text-slate-400 text-sm mb-8">Leave your details and we will get back to you shortly.</p>
+        <form class="space-y-4">
+          <input type="text" placeholder="Your Name" class="w-full px-5 py-3 rounded-2xl bg-slate-800 border border-slate-700 text-white focus:ring-2 focus:ring-blue-600 outline-none transition">
+          <input type="tel" placeholder="Mobile Number" class="w-full px-5 py-3 rounded-2xl bg-slate-800 border border-slate-700 text-white focus:ring-2 focus:ring-blue-600 outline-none transition">
+          <button class="w-full py-4 bg-blue-600 text-white font-bold rounded-2xl hover:bg-blue-700 shadow-lg shadow-blue-600/20 transition-all">Call Me Back</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="py-24 bg-slate-50 reveal">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-blue-600 font-bold tracking-widest uppercase text-sm mb-3">Expertise</h2>
+        <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900">Professional Services</h2>
+        <div class="h-1.5 w-20 bg-blue-600 mx-auto mt-6 rounded-full"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+        <div class="service-card reveal bg-white p-8 rounded-3xl shadow-sm group">
+          <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+            <i class="fas fa-building"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Corporate Services</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Company formation, ROC filings, and legal compliance.</p>
+        </div>
+
+        <div class="service-card reveal bg-white p-8 rounded-3xl shadow-sm group" style="transition-delay: 100ms;">
+          <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+            <i class="fas fa-file-contract"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Audit</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Statutory, internal, and management auditing services.</p>
+        </div>
+
+        <div class="service-card reveal bg-white p-8 rounded-3xl shadow-sm group" style="transition-delay: 200ms;">
+          <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+            <i class="fas fa-coins"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Income Tax</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Tax planning, return filing, and representation.</p>
+        </div>
+      </div>
+
+      <div id="extra-services" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="service-card reveal bg-white p-8 rounded-3xl shadow-sm group">
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Non-Resident Services</h3>
+          <p class="text-slate-600 text-sm">FEMA consultancy and NRI taxation advisory.</p>
+        </div>
+        <div class="service-card reveal bg-white p-8 rounded-3xl shadow-sm group">
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Accounting Services</h3>
+          <p class="text-slate-600 text-sm">Bookkeeping and financial statement preparation.</p>
+        </div>
+        <div class="service-card reveal bg-white p-8 rounded-3xl shadow-sm group">
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Payroll</h3>
+          <p class="text-slate-600 text-sm">Salary processing and statutory compliance.</p>
+        </div>
+        <div class="service-card reveal bg-white p-8 rounded-3xl shadow-sm group">
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Outsourcing Benefits</h3>
+          <p class="text-slate-600 text-sm">Optimizing business efficiency through outsourcing.</p>
+        </div>
+        <div class="service-card reveal bg-white p-8 rounded-3xl shadow-sm group">
+          <h3 class="text-xl font-bold text-slate-900 mb-2">GST</h3>
+          <p class="text-slate-600 text-sm">Registrations, returns, and audit reconciliation.</p>
+        </div>
+        <div class="service-card reveal bg-white p-8 rounded-3xl shadow-sm group">
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Corporate Governance</h3>
+          <p class="text-slate-600 text-sm">Ethical board practices and transparency.</p>
+        </div>
+        <div class="service-card reveal bg-white p-8 rounded-3xl shadow-sm group">
+          <h3 class="text-xl font-bold text-slate-900 mb-2">TDS</h3>
+          <p class="text-slate-600 text-sm">Calculation, deposit, and quarterly filing.</p>
+        </div>
+        <div class="service-card reveal bg-white p-8 rounded-3xl shadow-sm group">
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Financial Advisory</h3>
+          <p class="text-slate-600 text-sm">Strategic planning and investment guidance.</p>
+        </div>
+      </div>
+
+      <div class="text-center mt-12 reveal">
+        <button id="exploreBtn" onclick="toggleServices()" class="px-10 py-4 border-2 border-blue-600 text-blue-600 font-bold rounded-full hover:bg-blue-600 hover:text-white transition-all shadow-md">
+          Explore More Services
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-slate-900 text-white pt-16 pb-8 reveal">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div>
+        <div class="text-2xl font-bold mb-6">Attili & <span class="text-blue-500">Associates</span></div>
+        <p class="text-slate-400 text-sm leading-relaxed">Chartered Accountants providing strategic financial guidance and compliance excellence.</p>
+      </div>
+      <div>
+        <h4 class="text-lg font-bold mb-6">Quick Links</h4>
+        <ul class="space-y-3 text-slate-400 text-sm">
+          <li><a href="./index.html" class="hover:text-blue-400">Home</a></li>
+          <li><a href="./pages/about.html" class="hover:text-blue-400">About Us</a></li>
+          <li><a href="./pages/services.html" class="hover:text-blue-400">Services</a></li>
+          <li><a href="./pages/contact.html" class="hover:text-blue-400">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-lg font-bold mb-6">Our Office</h4>
+        <ul class="space-y-4 text-slate-400 text-sm">
+          <li class="flex gap-3"><i class="fas fa-map-marker-alt text-blue-500 mt-1"></i><span>City Hyderabad, State - Telangana</span></li>
+          <li class="flex gap-3"><i class="fas fa-phone-alt text-blue-500 mt-1"></i><span>+91 9542460669</span></li>
+          <li class="flex gap-3"><i class="fas fa-envelope text-blue-500 mt-1"></i><span>casaikumarattili@gmail.com</span></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-lg font-bold mb-6">Working Hours</h4>
+        <ul class="space-y-3 text-slate-400 text-sm">
+          <li class="flex justify-between"><span>Mon - Fri:</span> <span>9:00 AM - 6:00 PM</span></li>
+          <li class="flex justify-between text-red-400"><span>Sunday:</span><span>9:00 AM - 1:00 PM</span></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/main.js"></script>
+  <script>
+    // Reveal On Scroll Logic
+    window.addEventListener('load', () => { document.body.classList.add('page-loaded'); });
+
+    function toggleServices() {
+      const extra = document.getElementById('extra-services');
+      const btn = document.getElementById('exploreBtn');
+      if (extra.classList.contains('show')) {
+        extra.classList.remove('show');
+        btn.innerText = 'Explore More Services';
+      } else {
+        extra.classList.add('show');
+        btn.innerText = 'Show Less';
+        extra.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    }
+  </script>
+</body>
+</html>
