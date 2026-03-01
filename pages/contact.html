@@ -4,123 +4,119 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us | Attili & Associates</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/tailwind.css?v=3">
+  <link rel="stylesheet" href="../css/fontawesome.min.css?v=3">
   <style>
-    /* Scroll Reveal Animation Styles */
-    .reveal {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.9s ease-out;
-    }
-    .reveal.active {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    body { overflow-x: hidden; }
+    .reveal { opacity:0; transform:translateY(40px); transition: opacity 0.75s cubic-bezier(0.22,1,0.36,1), transform 0.75s cubic-bezier(0.22,1,0.36,1); }
+    .reveal.active { opacity:1; transform:translateY(0); }
+    .reveal-left { opacity:0; transform:translateX(-40px); transition: opacity 0.8s cubic-bezier(0.22,1,0.36,1), transform 0.8s cubic-bezier(0.22,1,0.36,1); }
+    .reveal-left.active { opacity:1; transform:translateX(0); }
+    .reveal-right { opacity:0; transform:translateX(40px); transition: opacity 0.8s cubic-bezier(0.22,1,0.36,1), transform 0.8s cubic-bezier(0.22,1,0.36,1); }
+    .reveal-right.active { opacity:1; transform:translateX(0); }
+    .delay-100 { transition-delay:0.10s; }
+    .delay-200 { transition-delay:0.20s; }
   </style>
 </head>
-
 <body class="bg-slate-50 text-gray-800 font-sans">
-
   <div id="navbar"></div>
 
-  <main class="pt-48 pb-20 px-6">
-    <div class="max-w-7xl mx-auto">
-      
-      <div class="text-center mb-16 reveal">
-        <h2 class="text-blue-600 font-bold tracking-widest uppercase text-sm mb-3">Get In Touch</h2>
-        <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6">How Can We Assist You?</h1>
-        <p class="text-gray-500 max-w-2xl mx-auto text-lg">Reach out to our experts for professional auditing, taxation, and financial consultancy services.</p>
-      </div>
-
-      <div class="flex flex-col lg:flex-row gap-12">
-        
-        <div class="lg:w-1/3 space-y-6 reveal" style="transition-delay: 100ms;">
-          
-          <div class="bg-white p-8 rounded-[2rem] shadow-xl border border-slate-100 flex items-start gap-6 hover:border-blue-500 transition-all">
-            <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center flex-shrink-0">
-              <i class="fas fa-phone-alt"></i>
-            </div>
-            <div>
-              <h4 class="font-bold text-slate-900 text-lg mb-1">Call Us</h4>
-              <p class="text-gray-600 text-sm mb-2">Direct assistance from our team.</p>
-              <a href="tel:+919542460669" class="text-blue-600 font-bold">+91 9542460669</a>
-            </div>
-          </div>
-
-          <div class="bg-white p-8 rounded-[2rem] shadow-xl border border-slate-100 flex items-start gap-6 hover:border-blue-500 transition-all">
-            <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center flex-shrink-0">
-              <i class="fas fa-envelope"></i>
-            </div>
-            <div>
-              <h4 class="font-bold text-slate-900 text-lg mb-1">Email Us</h4>
-              <p class="text-gray-600 text-sm mb-2">Send us your detailed inquiries.</p>
-              <a href="mailto:casaikumarattili@gmail.com" class="text-blue-600 font-bold break-all text-xs md:text-sm">casaikumarattili@gmail.com</a>
-            </div>
-          </div>
-
-          <div class="bg-white p-8 rounded-[2rem] shadow-xl border border-slate-100 flex items-start gap-6 hover:border-blue-500 transition-all">
-            <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center flex-shrink-0">
-              <i class="fas fa-map-marker-alt"></i>
-            </div>
-            <div>
-              <h4 class="font-bold text-slate-900 text-lg mb-1">Our Office</h4>
-              <p class="text-gray-600 text-sm leading-relaxed">
-                123 Finance Plaza, Business District,<br>
-                City Name, State - 000000
-              </p>
-            </div>
-          </div>
-
+  <main class="pt-32 md:pt-44 pb-0">
+    <section class="px-4 md:px-6 pb-16 md:pb-24">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-12 md:mb-16 reveal">
+          <span class="inline-block text-blue-600 text-xs font-black uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-full mb-4">Get In Touch</span>
+          <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 mb-4">How Can We Assist You?</h1>
+          <p class="text-gray-500 max-w-2xl mx-auto text-base md:text-lg">Reach out to our experts for professional auditing, taxation, and financial consultancy services.</p>
         </div>
 
-        <div class="lg:w-2/3 bg-slate-900 p-8 md:p-12 rounded-[2.5rem] shadow-2xl border border-slate-800 text-white reveal" style="transition-delay: 200ms;">
-          <h3 class="text-2xl font-bold mb-8 flex items-center gap-3">
-            <span class="w-1 bg-blue-600 h-8 rounded-full"></span>
-            Send a Message
-          </h3>
-          
-          <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="flex flex-col gap-2">
-              <label class="text-[10px] uppercase tracking-widest font-bold text-slate-500 ml-1">Full Name</label>
-              <input type="text" placeholder="Your Name" class="w-full px-5 py-3.5 rounded-2xl bg-slate-800 border border-slate-700 text-white focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all">
+        <div class="flex flex-col lg:flex-row gap-8 md:gap-12">
+          <!-- Contact cards -->
+          <div class="lg:w-1/3 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-4 md:gap-5 reveal-left">
+            <div class="bg-white p-5 md:p-7 rounded-[1.75rem] shadow-xl border border-slate-100 flex items-start gap-4 hover:border-blue-400 hover:shadow-blue-100 transition-all duration-300 group">
+              <div class="w-11 h-11 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <div class="min-w-0">
+                <h4 class="font-bold text-slate-900 text-base mb-0.5">Call Us</h4>
+                <p class="text-gray-500 text-xs mb-2">Direct assistance from our team.</p>
+                <a href="tel:+919542460669" class="text-blue-600 font-bold text-sm">+91 9542460669</a>
+              </div>
             </div>
+            <div class="bg-white p-5 md:p-7 rounded-[1.75rem] shadow-xl border border-slate-100 flex items-start gap-4 hover:border-blue-400 hover:shadow-blue-100 transition-all duration-300 group">
+              <div class="w-11 h-11 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="min-w-0">
+                <h4 class="font-bold text-slate-900 text-base mb-0.5">Email Us</h4>
+                <p class="text-gray-500 text-xs mb-2">Send us your detailed inquiries.</p>
+                <a href="mailto:casaikumarattili@gmail.com" class="text-blue-600 font-bold break-all text-xs">casaikumarattili@gmail.com</a>
+              </div>
+            </div>
+            <div class="bg-white p-5 md:p-7 rounded-[1.75rem] shadow-xl border border-slate-100 flex items-start gap-4 hover:border-blue-400 hover:shadow-blue-100 transition-all duration-300 group">
+              <div class="w-11 h-11 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="min-w-0">
+                <h4 class="font-bold text-slate-900 text-base mb-0.5">Our Office</h4>
+                <p class="text-gray-500 text-xs leading-relaxed">123 Finance Plaza,<br>Hyderabad, Telangana</p>
+              </div>
+            </div>
+          </div>
 
-            <div class="flex flex-col gap-2">
-              <label class="text-[10px] uppercase tracking-widest font-bold text-slate-500 ml-1">Email Address</label>
-              <input type="email" placeholder="email@example.com" class="w-full px-5 py-3.5 rounded-2xl bg-slate-800 border border-slate-700 text-white focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all">
-            </div>
-
-            <div class="flex flex-col gap-2 md:col-span-2">
-              <label class="text-[10px] uppercase tracking-widest font-bold text-slate-500 ml-1">Subject</label>
-              <input type="text" placeholder="Service Inquiry" class="w-full px-5 py-3.5 rounded-2xl bg-slate-800 border border-slate-700 text-white focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all">
-            </div>
-
-            <div class="flex flex-col gap-2 md:col-span-2">
-              <label class="text-[10px] uppercase tracking-widest font-bold text-slate-500 ml-1">Your Message</label>
-              <textarea rows="5" placeholder="How can we help you today?" class="w-full px-5 py-4 rounded-3xl bg-slate-800 border border-slate-700 text-white focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all resize-none"></textarea>
-            </div>
-
-            <div class="md:col-span-2 mt-4">
-              <button type="submit" class="w-full md:w-auto px-12 py-4 bg-blue-600 text-white font-bold rounded-full hover:bg-blue-700 shadow-lg shadow-blue-600/20 transition-all duration-300">
-                Send Message
-              </button>
-            </div>
-          </form>
+          <!-- Form -->
+          <div class="lg:w-2/3 bg-slate-900 p-6 md:p-12 rounded-[2rem] md:rounded-[2.5rem] shadow-2xl border border-slate-800 text-white reveal-right">
+            <h3 class="text-xl md:text-2xl font-bold mb-7 flex items-center gap-3">
+              <span class="w-1 bg-blue-600 h-8 rounded-full flex-shrink-0"></span>
+              Send a Message
+            </h3>
+            <form id="contact-form" autocomplete="on" class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div class="flex flex-col gap-1.5">
+                <label for="contact-name" class="text-[10px] uppercase tracking-widest font-bold text-slate-400">Full Name</label>
+                <input id="contact-name" name="full_name" type="text" autocomplete="name" placeholder="Your Name" class="w-full px-4 py-3.5 rounded-2xl bg-slate-800 border border-slate-700 text-white focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all text-base placeholder-slate-500">
+              </div>
+              <div class="flex flex-col gap-1.5">
+                <label for="contact-email" class="text-[10px] uppercase tracking-widest font-bold text-slate-400">Email Address</label>
+                <input id="contact-email" name="email" type="email" autocomplete="email" placeholder="email@example.com" class="w-full px-4 py-3.5 rounded-2xl bg-slate-800 border border-slate-700 text-white focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all text-base placeholder-slate-500">
+              </div>
+              <div class="flex flex-col gap-1.5 sm:col-span-2">
+                <label for="contact-subject" class="text-[10px] uppercase tracking-widest font-bold text-slate-400">Subject</label>
+                <input id="contact-subject" name="subject" type="text" placeholder="Service Inquiry" class="w-full px-4 py-3.5 rounded-2xl bg-slate-800 border border-slate-700 text-white focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all text-base placeholder-slate-500">
+              </div>
+              <div class="flex flex-col gap-1.5 sm:col-span-2">
+                <label for="contact-message" class="text-[10px] uppercase tracking-widest font-bold text-slate-400">Your Message</label>
+                <textarea id="contact-message" name="message" rows="5" placeholder="How can we help you today?" class="w-full px-4 py-4 rounded-3xl bg-slate-800 border border-slate-700 text-white focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all resize-none text-base placeholder-slate-500"></textarea>
+              </div>
+              <div class="sm:col-span-2 mt-2">
+                <button type="submit" class="w-full sm:w-auto px-12 py-4 bg-blue-600 text-white font-bold rounded-full hover:bg-blue-700 shadow-lg shadow-blue-600/20 transition-all duration-200 hover:-translate-y-0.5 active:scale-95">
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
-
       </div>
-    </div>
+    </section>
+
+    <!-- Map placeholder -->
+    <section class="py-0 px-4 md:px-6 pb-16 reveal">
+      <div class="max-w-7xl mx-auto">
+        <div class="w-full h-64 md:h-96 bg-slate-200 rounded-[2rem] overflow-hidden shadow-inner border border-slate-100 flex items-center justify-center">
+          <p class="text-slate-500 font-semibold italic text-sm">[ Google Map Embed ]</p>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <section class="py-20 px-6 reveal">
-    <div class="max-w-7xl mx-auto">
-      <div class="w-full h-96 bg-slate-200 rounded-[2.5rem] overflow-hidden shadow-inner border border-slate-100 flex items-center justify-center">
-        <p class="text-slate-500 font-semibold italic">[ Google Map Embed - Your Location ]</p>
-      </div>
-    </div>
-  </section>
-
+  <div id="site-footer"></div>
   <script src="../js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('active'); });
+      }, { threshold: 0.08 });
+      document.querySelectorAll('.reveal-left, .reveal-right').forEach(el => obs.observe(el));
+    });
+  </script>
 </body>
 </html>

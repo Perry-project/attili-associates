@@ -4,42 +4,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Submit a Query | Attili & Associates</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../css/tailwind.css?v=3">
+  <link rel="stylesheet" href="../css/fontawesome.min.css?v=3">
+  <style>
+    body { overflow-x: hidden; }
+    .reveal { opacity:0; transform:translateY(40px); transition: opacity 0.75s cubic-bezier(0.22,1,0.36,1), transform 0.75s cubic-bezier(0.22,1,0.36,1); }
+    .reveal.active { opacity:1; transform:translateY(0); }
+    .delay-100 { transition-delay:0.1s; }
+  </style>
 </head>
-
 <body class="bg-slate-50 text-gray-800 font-sans">
-
   <div id="navbar"></div>
-
-  <main class="pt-40 pb-20 px-6">
+  <main class="pt-32 md:pt-44 pb-16 md:pb-24 px-4 md:px-6">
     <div class="max-w-4xl mx-auto">
-      
-      <div class="text-center mb-12">
-        <h1 class="text-4xl font-extrabold text-slate-900">Submit an Inquiry</h1>
-        <p class="mt-4 text-gray-600">Have a specific financial requirement? Fill out the form below, and our experts will get back to you shortly.</p>
+      <div class="text-center mb-10 md:mb-12 reveal">
+        <span class="inline-block text-blue-600 text-xs font-black uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-full mb-4">Enquiry</span>
+        <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900">Submit an Inquiry</h1>
+        <p class="mt-3 text-gray-500 text-sm md:text-base max-w-xl mx-auto">Have a specific financial requirement? Fill out the form below and our experts will get back to you shortly.</p>
       </div>
+      <div class="bg-white rounded-3xl shadow-xl border border-slate-100 p-6 md:p-12 reveal delay-100">
+        <form id="query-form" action="#" method="POST" autocomplete="on" class="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-6">
 
-      <div class="bg-white rounded-3xl shadow-xl border border-slate-100 p-8 md:p-12">
-        <form action="#" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          
-          <div class="flex flex-col gap-2">
-            <label class="text-sm font-semibold text-slate-700 ml-1">Full Name</label>
-            <input type="text" required placeholder="John Doe" class="px-5 py-3 rounded-2xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all">
+          <div class="flex flex-col gap-1.5">
+            <label for="q-name" class="text-sm font-semibold text-slate-700">Full Name *</label>
+            <input id="q-name" name="full_name" type="text" required autocomplete="name" placeholder="John Doe" class="px-4 py-3 rounded-2xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-base">
           </div>
 
-          <div class="flex flex-col gap-2">
-            <label class="text-sm font-semibold text-slate-700 ml-1">Email Address</label>
-            <input type="email" required placeholder="john@example.com" class="px-5 py-3 rounded-2xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all">
+          <div class="flex flex-col gap-1.5">
+            <label for="q-email" class="text-sm font-semibold text-slate-700">Email Address *</label>
+            <input id="q-email" name="email" type="email" required autocomplete="email" placeholder="john@example.com" class="px-4 py-3 rounded-2xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-base">
           </div>
 
-          <div class="flex flex-col gap-2">
-            <label class="text-sm font-semibold text-slate-700 ml-1">Phone Number</label>
-            <input type="tel" placeholder="+91 98765 43210" class="px-5 py-3 rounded-2xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all">
+          <div class="flex flex-col gap-1.5">
+            <label for="q-phone" class="text-sm font-semibold text-slate-700">Phone Number</label>
+            <input id="q-phone" name="phone" type="tel" autocomplete="tel" placeholder="+91 98765 43210" class="px-4 py-3 rounded-2xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-base">
           </div>
 
-          <div class="flex flex-col gap-2">
-            <label class="text-sm font-semibold text-slate-700 ml-1">Select Service</label>
-            <select required class="px-5 py-3 rounded-2xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white transition-all">
+          <div class="flex flex-col gap-1.5">
+            <label for="q-service" class="text-sm font-semibold text-slate-700">Select Service *</label>
+            <select id="q-service" name="service" required class="px-4 py-3 rounded-2xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white transition-all text-base appearance-none">
               <option value="">-- Choose a Service --</option>
               <option value="corporate">Corporate Services</option>
               <option value="audit">Audit</option>
@@ -51,30 +54,30 @@
               <option value="gst">GST</option>
               <option value="governance">Corporate Governance</option>
               <option value="tds">TDS</option>
+              <option value="advisory">Financial Advisory</option>
             </select>
           </div>
 
-          <div class="flex flex-col gap-2 md:col-span-2">
-            <label class="text-sm font-semibold text-slate-700 ml-1">Subject</label>
-            <input type="text" placeholder="Briefly describe your query" class="px-5 py-3 rounded-2xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all">
+          <div class="flex flex-col gap-1.5 sm:col-span-2">
+            <label for="q-subject" class="text-sm font-semibold text-slate-700">Subject</label>
+            <input id="q-subject" name="subject" type="text" placeholder="Briefly describe your query" class="px-4 py-3 rounded-2xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all text-base">
           </div>
 
-          <div class="flex flex-col gap-2 md:col-span-2">
-            <label class="text-sm font-semibold text-slate-700 ml-1">Message</label>
-            <textarea rows="5" placeholder="Tell us more about your requirements..." class="px-5 py-4 rounded-3xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"></textarea>
+          <div class="flex flex-col gap-1.5 sm:col-span-2">
+            <label for="q-message" class="text-sm font-semibold text-slate-700">Message</label>
+            <textarea id="q-message" name="message" rows="5" placeholder="Tell us more about your requirements..." class="px-4 py-4 rounded-3xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all text-base resize-none"></textarea>
           </div>
 
-          <div class="md:col-span-2 mt-4 text-center">
-            <button type="submit" class="px-12 py-4 bg-blue-600 text-white font-bold rounded-full shadow-lg hover:bg-blue-700 hover:-translate-y-1 transition-all duration-300">
+          <div class="sm:col-span-2 mt-2 text-center">
+            <button type="submit" class="w-full sm:w-auto px-12 py-4 bg-blue-600 text-white font-bold rounded-full shadow-lg hover:bg-blue-700 hover:-translate-y-0.5 transition-all duration-200 active:scale-95">
               Send Message
             </button>
           </div>
-
         </form>
       </div>
     </div>
   </main>
-
+  <div id="site-footer"></div>
   <script src="../js/main.js"></script>
 </body>
 </html>

@@ -4,113 +4,117 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Careers | Attili & Associates</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../css/tailwind.css?v=3">
+  <link rel="stylesheet" href="../css/fontawesome.min.css?v=3">
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <style>
+    body { overflow-x: hidden; }
+    .reveal { opacity:0; transform:translateY(40px); transition: opacity 0.75s cubic-bezier(0.22,1,0.36,1), transform 0.75s cubic-bezier(0.22,1,0.36,1); }
+    .reveal.active { opacity:1; transform:translateY(0); }
+    .delay-100 { transition-delay:0.1s; }
+  </style>
 </head>
-
 <body class="bg-slate-50 text-gray-800 font-sans">
-
   <div id="navbar"></div>
-
-  <main class="pt-40 pb-20 px-6">
+  <main class="pt-32 md:pt-44 pb-16 md:pb-24 px-4 md:px-6">
     <div class="max-w-5xl mx-auto">
-      
-      <div class="text-center mb-16">
-        <h2 class="text-blue-600 font-bold tracking-widest uppercase text-sm mb-3">Join the Excellence</h2>
-        <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900">Career Application</h1>
-        <p class="mt-4 text-gray-500 max-w-2xl mx-auto">
-          We nurture and cultivate a sense of pride in our work. Your growth at Attili & Associates is governed by transparent policies and professional mentorship.
-        </p>
+      <div class="text-center mb-12 md:mb-16 reveal">
+        <span class="inline-block text-blue-600 text-xs font-black uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-full mb-4">Join the Excellence</span>
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900">Career Application</h1>
+        <p class="mt-4 text-gray-500 max-w-2xl mx-auto text-sm md:text-base">We nurture and cultivate a sense of pride in our work. Your growth at Attili &amp; Associates is governed by transparent policies and professional mentorship.</p>
       </div>
 
-      <div class="bg-white rounded-[2.5rem] shadow-2xl border border-slate-100 overflow-hidden">
-        <div class="bg-blue-600 p-4 text-center">
-            <span class="text-white text-xs font-bold uppercase tracking-widest">Application Portal</span>
+      <div class="bg-white rounded-[2rem] md:rounded-[2.5rem] shadow-2xl border border-slate-100 overflow-hidden reveal delay-100">
+        <div class="bg-gradient-to-r from-blue-700 to-blue-500 p-4 text-center">
+          <span class="text-white text-xs font-black uppercase tracking-widest">Application Portal</span>
         </div>
 
-        <form id="application-form" class="p-8 md:p-12 space-y-10">
-          
+        <form id="application-form" class="p-6 md:p-12 space-y-8 md:space-y-10" autocomplete="on">
+
+          <!-- Section 01 -->
           <div>
-            <h3 class="text-lg font-bold text-slate-900 mb-6 flex items-center gap-2">
-                <span class="w-8 h-8 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center text-sm">01</span>
-                Personal Details
+            <h3 class="text-base md:text-lg font-bold text-slate-900 mb-5 flex items-center gap-2">
+              <span class="w-8 h-8 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center text-sm flex-shrink-0 font-black">01</span>
+              Personal Details
             </h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div class="group">
-                <label class="block text-xs font-bold text-slate-500 uppercase mb-2 ml-1">First Name *</label>
-                <input type="text" name="first_name" required class="w-full px-5 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-6">
+              <div>
+                <label for="app-fname" class="block text-xs font-bold text-slate-500 uppercase mb-2">First Name *</label>
+                <input id="app-fname" name="first_name" type="text" required autocomplete="given-name" class="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all text-base">
               </div>
-              <div class="group">
-                <label class="block text-xs font-bold text-slate-500 uppercase mb-2 ml-1">Last Name *</label>
-                <input type="text" name="last_name" required class="w-full px-5 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all">
+              <div>
+                <label for="app-lname" class="block text-xs font-bold text-slate-500 uppercase mb-2">Last Name *</label>
+                <input id="app-lname" name="last_name" type="text" required autocomplete="family-name" class="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all text-base">
               </div>
-              <div class="group">
-                <label class="block text-xs font-bold text-slate-500 uppercase mb-2 ml-1">Email Address *</label>
-                <input type="email" name="email" required class="w-full px-5 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all">
+              <div>
+                <label for="app-email" class="block text-xs font-bold text-slate-500 uppercase mb-2">Email Address *</label>
+                <input id="app-email" name="email" type="email" required autocomplete="email" class="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all text-base">
               </div>
-              <div class="group">
-                <label class="block text-xs font-bold text-slate-500 uppercase mb-2 ml-1">Mobile Number *</label>
-                <input type="tel" name="mobile" required class="w-full px-5 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all">
+              <div>
+                <label for="app-mobile" class="block text-xs font-bold text-slate-500 uppercase mb-2">Mobile Number *</label>
+                <input id="app-mobile" name="mobile" type="tel" required autocomplete="tel" class="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all text-base">
               </div>
-              <div class="group">
-                <label class="block text-xs font-bold text-slate-500 uppercase mb-2 ml-1">Gender *</label>
-                <select name="gender" required class="w-full px-5 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all appearance-none">
+              <div>
+                <label for="app-gender" class="block text-xs font-bold text-slate-500 uppercase mb-2">Gender *</label>
+                <select id="app-gender" name="gender" required class="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all appearance-none text-base">
                   <option value="">Select Gender</option>
                   <option value="male">Male</option>
                   <option value="female">Female</option>
                   <option value="other">Other</option>
                 </select>
               </div>
-              <div class="group">
-                <label class="block text-xs font-bold text-slate-500 uppercase mb-2 ml-1">Date of Birth *</label>
-                <input type="date" name="dob" required class="w-full px-5 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all">
+              <div>
+                <label for="app-dob" class="block text-xs font-bold text-slate-500 uppercase mb-2">Date of Birth *</label>
+                <input id="app-dob" name="dob" type="date" required autocomplete="bday" class="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all text-base">
               </div>
             </div>
           </div>
 
           <hr class="border-slate-100">
 
+          <!-- Section 02 -->
           <div>
-            <h3 class="text-lg font-bold text-slate-900 mb-6 flex items-center gap-2">
-                <span class="w-8 h-8 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center text-sm">02</span>
-                Professional Background
+            <h3 class="text-base md:text-lg font-bold text-slate-900 mb-5 flex items-center gap-2">
+              <span class="w-8 h-8 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center text-sm flex-shrink-0 font-black">02</span>
+              Professional Background
             </h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div class="group">
-                <label class="block text-xs font-bold text-slate-500 uppercase mb-2 ml-1">Position Applying For *</label>
-                <input type="text" name="position" required placeholder="e.g. Audit Associate" class="w-full px-5 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-6">
+              <div>
+                <label for="app-position" class="block text-xs font-bold text-slate-500 uppercase mb-2">Position Applying For *</label>
+                <input id="app-position" name="position" type="text" required placeholder="e.g. Audit Associate" class="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all text-base">
               </div>
-              <div class="group">
-                <label class="block text-xs font-bold text-slate-500 uppercase mb-2 ml-1">Highest Qualification *</label>
-                <input type="text" name="qualification" required placeholder="e.g. CA Inter / M.Com" class="w-full px-5 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all">
+              <div>
+                <label for="app-qualification" class="block text-xs font-bold text-slate-500 uppercase mb-2">Highest Qualification *</label>
+                <input id="app-qualification" name="qualification" type="text" required placeholder="e.g. CA Inter / M.Com" class="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all text-base">
               </div>
-              <div class="group">
-                <label class="block text-xs font-bold text-slate-500 uppercase mb-2 ml-1">Last Company / Firm</label>
-                <input type="text" name="last_company" class="w-full px-5 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all">
+              <div>
+                <label for="app-company" class="block text-xs font-bold text-slate-500 uppercase mb-2">Last Company / Firm</label>
+                <input id="app-company" name="last_company" type="text" autocomplete="organization" class="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all text-base">
               </div>
-              <div class="group">
-                <label class="block text-xs font-bold text-slate-500 uppercase mb-2 ml-1">Total Experience (Years)</label>
-                <input type="number" name="experience" placeholder="0" class="w-full px-5 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all">
+              <div>
+                <label for="app-exp" class="block text-xs font-bold text-slate-500 uppercase mb-2">Total Experience (Years)</label>
+                <input id="app-exp" name="experience" type="number" min="0" placeholder="0" class="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all text-base">
               </div>
-              <div class="group md:col-span-2">
-                <label class="block text-xs font-bold text-slate-500 uppercase mb-2 ml-1">Upload Resume (PDF only, Max 1MB) *</label>
-                <div class="relative w-full px-5 py-3 bg-slate-50 border-2 border-dashed border-slate-200 rounded-2xl flex items-center justify-center hover:border-blue-400 transition-all">
-                    <input type="file" name="resume" required class="absolute inset-0 opacity-0 cursor-pointer">
-                    <span class="text-sm text-slate-500">Click to upload or drag and drop</span>
+              <div class="sm:col-span-2">
+                <label for="app-resume" class="block text-xs font-bold text-slate-500 uppercase mb-2">Upload Resume (PDF only, Max 1MB) *</label>
+                <div class="relative w-full px-5 py-5 bg-slate-50 border-2 border-dashed border-slate-200 rounded-2xl flex flex-col items-center justify-center hover:border-blue-400 transition-all">
+                  <i class="fas fa-file-contract text-slate-300 text-2xl mb-2"></i>
+                  <span class="text-sm text-slate-500 font-medium">Tap to upload or drag and drop</span>
+                  <span class="text-xs text-slate-400 mt-1">PDF only · Max 1MB</span>
+                  <input id="app-resume" name="resume" type="file" required accept=".pdf" class="absolute inset-0 opacity-0 cursor-pointer w-full h-full">
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="group">
-            <label class="block text-xs font-bold text-slate-500 uppercase mb-2 ml-1">Reference / Questions</label>
-            <textarea name="comments" rows="4" class="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-3xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all"></textarea>
+          <div>
+            <label for="app-comments" class="block text-xs font-bold text-slate-500 uppercase mb-2">Reference / Questions</label>
+            <textarea id="app-comments" name="comments" rows="4" class="w-full px-4 py-4 bg-slate-50 border border-slate-200 rounded-3xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all text-base resize-none"></textarea>
           </div>
 
           <div class="text-center">
-            <button type="submit" class="group relative px-12 py-4 bg-slate-900 text-white font-bold rounded-full overflow-hidden transition-all hover:bg-blue-600 shadow-xl">
-              <span class="relative z-10">Send Application</span>
-              <div class="absolute inset-0 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
+            <button type="submit" class="w-full sm:w-auto group relative px-10 md:px-12 py-4 bg-slate-900 text-white font-bold rounded-full overflow-hidden transition-all hover:bg-blue-600 shadow-xl hover:-translate-y-0.5 active:scale-95 duration-200">
+              Send Application
             </button>
           </div>
         </form>
@@ -118,33 +122,26 @@
     </div>
   </main>
 
+  <div id="site-footer"></div>
   <script src="../js/main.js"></script>
-
   <script>
     (function() {
-        // Initialize EmailJS with your Public Key
-        // Get this from: https://dashboard.emailjs.com/admin/account
-        emailjs.init("YOUR_PUBLIC_KEY"); 
-
-        const btn = document.querySelector('button[type="submit"]');
-        
-        document.getElementById('application-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            btn.innerText = 'Sending...';
-
-            // Parameters to send to the company email
-            // You must create a template in EmailJS first
-            emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
-                .then(function() {
-                    alert('Application Sent Successfully!');
-                    btn.innerText = 'Send Application';
-                    document.getElementById('application-form').reset();
-                }, function(error) {
-                    alert('Failed to send... Please try again later.');
-                    console.log('FAILED...', error);
-                    btn.innerText = 'Send Application';
-                });
-        });
+      emailjs.init("YOUR_PUBLIC_KEY");
+      const btn = document.querySelector('#application-form button[type="submit"]');
+      document.getElementById('application-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        btn.innerText = 'Sending...';
+        emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+          .then(() => {
+            alert('Application Sent Successfully!');
+            btn.innerText = 'Send Application';
+            this.reset();
+          }, (err) => {
+            alert('Failed to send. Please try again later.');
+            console.error(err);
+            btn.innerText = 'Send Application';
+          });
+      });
     })();
   </script>
 </body>

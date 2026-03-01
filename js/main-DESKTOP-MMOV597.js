@@ -97,7 +97,7 @@ const loadNavbar = () => {
             <svg viewBox="0 0 100 100" class="w-6 h-6 md:w-7 md:h-7 fill-white"><text x="50%" y="50%" text-anchor="middle" dy=".35em" font-family="Arial,sans-serif" font-weight="900" font-size="45">CA</text></svg>
           </div>
           <div class="flex flex-col leading-none gap-0.5">
-            <span class="text-base md:text-lg font-extrabold text-slate-900 tracking-tight whitespace-nowrap">Attili &amp; Associates</span>
+            <span class="text-base md:text-lg font-extrabold text-blue-600 tracking-tight whitespace-nowrap">Attili &amp; Associates</span>
             <span class="text-[8px] md:text-[9px] uppercase tracking-[0.18em] text-slate-900 font-black whitespace-nowrap">Chartered Accountants</span>
           </div>
         </a>

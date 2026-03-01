@@ -4,76 +4,130 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us | Attili & Associates</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../css/tailwind.css?v=3">
+  <link rel="stylesheet" href="../css/fontawesome.min.css?v=3">
+  <style>
+    body { overflow-x: hidden; }
+    .reveal { opacity:0; transform:translateY(40px); transition: opacity 0.75s cubic-bezier(0.22,1,0.36,1), transform 0.75s cubic-bezier(0.22,1,0.36,1); }
+    .reveal.active { opacity:1; transform:translateY(0); }
+    .reveal-left { opacity:0; transform:translateX(-40px); transition: opacity 0.8s cubic-bezier(0.22,1,0.36,1), transform 0.8s cubic-bezier(0.22,1,0.36,1); }
+    .reveal-left.active { opacity:1; transform:translateX(0); }
+    .reveal-right { opacity:0; transform:translateX(40px); transition: opacity 0.8s cubic-bezier(0.22,1,0.36,1), transform 0.8s cubic-bezier(0.22,1,0.36,1); }
+    .reveal-right.active { opacity:1; transform:translateX(0); }
+    .delay-100 { transition-delay:0.10s; }
+    .delay-200 { transition-delay:0.20s; }
+    .img-hover { transition: transform 0.5s ease; }
+    .img-hover:hover { transform: scale(1.04); }
+  </style>
 </head>
-
 <body class="bg-slate-50 text-gray-800 font-sans">
 
   <div id="navbar"></div>
 
-  <main class="pt-40 pb-20 px-6">
-    <div class="max-w-7xl mx-auto">
-      
-      <div class="flex flex-col md:flex-row items-center gap-12 mb-20">
-        <div class="md:w-1/2">
-          <h2 class="text-blue-600 font-bold tracking-widest uppercase text-sm mb-3">Who We Are</h2>
-          <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 leading-tight">
+  <main class="pt-32 md:pt-44 pb-0">
+
+    <!-- ── HERO ── -->
+    <section class="px-4 md:px-6 pb-16 md:pb-24">
+      <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-14">
+
+        <!-- Text -->
+        <div class="md:w-1/2 text-center md:text-left reveal-left">
+          <h2 class="text-blue-600 font-black tracking-widest uppercase text-xs mb-3">Who We Are</h2>
+          <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 leading-tight">
             Commitment to <span class="text-blue-600">Financial Excellence.</span>
           </h1>
-          <p class="mt-6 text-lg text-gray-600 leading-relaxed">
-            Attili & Associates is a premier Chartered Accountancy firm dedicated to providing top-tier auditing, taxation, and financial advisory services. We pride ourselves on our integrity, precision, and deep understanding of the regulatory landscape.
+          <p class="mt-5 text-base md:text-lg text-gray-500 leading-relaxed">
+            Attili &amp; Associates is a premier Chartered Accountancy firm dedicated to providing top-tier auditing, taxation, and financial advisory services. We pride ourselves on our integrity, precision, and deep understanding of the regulatory landscape.
           </p>
-          <div class="mt-8 flex items-center gap-6">
-            <div class="text-center">
-            
+          <div class="mt-8 grid grid-cols-2 gap-4">
+            <div class="bg-white border border-slate-100 rounded-2xl p-4 text-center shadow-sm hover:shadow-md transition-shadow">
+              <div class="text-2xl font-extrabold text-blue-600">10+</div>
+              <div class="text-xs text-slate-500 font-semibold mt-1">Years of Practice</div>
             </div>
-            <div class="w-px h-12 bg-gray-200"></div>
-            <div class="text-center">
-            
+            <div class="bg-white border border-slate-100 rounded-2xl p-4 text-center shadow-sm hover:shadow-md transition-shadow">
+              <div class="text-2xl font-extrabold text-blue-600">500+</div>
+              <div class="text-xs text-slate-500 font-semibold mt-1">Happy Clients</div>
             </div>
           </div>
         </div>
-        <div class="md:w-1/2">
-          <div class="bg-blue-600 rounded-3xl h-96 w-full shadow-2xl overflow-hidden flex items-center justify-center">
-             <span class="text-white/50 font-semibold italic text-xl">[ Firm Office Image ]</span>
+
+        <!-- Image -->
+        <div class="md:w-1/2 w-full px-2 md:px-0 reveal-right">
+          <div class="relative w-full h-72 sm:h-96 md:h-[460px] rounded-[2rem] md:rounded-[2.5rem] overflow-hidden border-4 border-white shadow-2xl ring-1 ring-slate-200">
+            <img src="../ca-office.jpg" alt="Attili &amp; Associates Office" class="w-full h-full object-cover img-hover">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/30 to-transparent pointer-events-none"></div>
+            <!-- Label badge -->
+            <div class="absolute bottom-5 left-5 right-5 bg-white/90 backdrop-blur-sm px-4 py-3 rounded-2xl shadow-xl flex items-center gap-3">
+              <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg viewBox="0 0 100 100" class="w-5 h-5 fill-white"><text x="50%" y="50%" text-anchor="middle" dy=".35em" font-family="Arial,sans-serif" font-weight="900" font-size="45">CA</text></svg>
+              </div>
+              <div>
+                <div class="text-xs font-extrabold text-slate-900">Attili &amp; Associates</div>
+                <div class="text-[10px] text-blue-600 font-semibold">Chartered Accountants · Est. Hyderabad</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition">
-          <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-6">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-slate-900 mb-3">Our Integrity</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">We maintain the highest ethical standards in every audit and advisory engagement, ensuring complete transparency for our clients.</p>
+    <!-- ── VALUES ── -->
+    <section class="bg-white py-16 md:py-20 px-4 md:px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-12 reveal">
+          <h2 class="text-blue-600 font-black tracking-widest uppercase text-xs mb-3">Our Foundation</h2>
+          <h3 class="text-2xl md:text-3xl font-extrabold text-slate-900">What Sets Us Apart</h3>
+          <div class="h-1 w-16 bg-blue-600 mx-auto mt-4 rounded-full"></div>
         </div>
-
-        <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition">
-          <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-6">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
+          <div class="reveal bg-white p-6 md:p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-lg hover:border-blue-200 transition-all duration-300 group">
+            <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-5 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-3">Our Integrity</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">We maintain the highest ethical standards in every audit and advisory engagement, ensuring complete transparency for our clients.</p>
           </div>
-          <h3 class="text-xl font-bold text-slate-900 mb-3">Service Excellence</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Our team stays ahead of changing laws and regulations to provide you with accurate, timely, and actionable financial insights.</p>
-        </div>
-
-        <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition">
-          <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-6">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
-            </svg>
+          <div class="reveal delay-100 bg-white p-6 md:p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-lg hover:border-blue-200 transition-all duration-300 group">
+            <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-5 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-3">Service Excellence</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">Our team stays ahead of changing laws and regulations to provide you with accurate, timely, and actionable financial insights.</p>
           </div>
-          <h3 class="text-xl font-bold text-slate-900 mb-3">Client Focused</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">We treat your business as our own. Your growth and financial compliance are our top priorities in every partnership.</p>
+          <div class="reveal delay-200 bg-white p-6 md:p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-lg hover:border-blue-200 transition-all duration-300 group sm:col-span-2 md:col-span-1">
+            <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-5 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-3">Client Focused</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">We treat your business as our own. Your growth and financial compliance are our top priorities in every partnership.</p>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
+
+    <!-- ── CTA ── -->
+    <section class="py-14 md:py-20 bg-blue-600 reveal">
+      <div class="max-w-3xl mx-auto px-4 text-center text-white">
+        <h2 class="text-2xl md:text-3xl font-extrabold mb-4">Let's work together</h2>
+        <p class="text-blue-100 mb-8 text-sm md:text-base">Whether you need help with tax planning, auditing, or financial compliance — our experts are here to help.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="../pages/query.html" class="px-8 py-3.5 bg-white text-blue-600 font-bold rounded-full hover:bg-blue-50 transition-all shadow-lg hover:-translate-y-0.5 duration-200">Submit a Query</a>
+          <a href="../pages/contact.html" class="px-8 py-3.5 border-2 border-white text-white font-bold rounded-full hover:bg-white/10 transition-all hover:-translate-y-0.5 duration-200">Contact Us</a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
+  <div id="site-footer"></div>
   <script src="../js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('active'); });
+      }, { threshold: 0.08 });
+      document.querySelectorAll('.reveal-left, .reveal-right').forEach(el => obs.observe(el));
+    });
+  </script>
 </body>
 </html>
